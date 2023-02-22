@@ -21,8 +21,6 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(height: 25),
-
           // Title
           SizedBox(
             width: double.infinity,
@@ -65,7 +63,7 @@ class _HomePageState extends State<HomePage> {
 
           // List View
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.54,
+            height: MediaQuery.of(context).size.height * 0.6,
             child: ListView(
               children: [
                 // Categories
@@ -142,7 +140,8 @@ class _HomePageState extends State<HomePage> {
                     controller: controller,
                     count: 2,
                     effect: ExpandingDotsEffect(
-                        activeDotColor: Colors.grey.shade700),
+                      activeDotColor: Colors.grey.shade700,
+                    ),
                   ),
                 ),
 
@@ -164,25 +163,25 @@ class _HomePageState extends State<HomePage> {
                     LessonTile(
                       imagePath: "assets/icons/algebra.png",
                       tileTitle: "Algebra Basics",
-                      tileSubTitle: "By SamKate",
+                      tileSubTitle: "By teacher",
                       tileRating: 4.6,
                     ),
                     LessonTile(
                       imagePath: "assets/icons/geometry.png",
                       tileTitle: "Geometry Basics",
-                      tileSubTitle: "By SamKate",
+                      tileSubTitle: "By teacher",
                       tileRating: 4.6,
                     ),
                     LessonTile(
                       imagePath: "assets/icons/physics.png",
                       tileTitle: "Physics Basics",
-                      tileSubTitle: "By SamKate",
+                      tileSubTitle: "By teacher",
                       tileRating: 4.6,
                     ),
                     LessonTile(
                       imagePath: "assets/icons/chemistry.png",
                       tileTitle: "Chemistry Basics",
-                      tileSubTitle: "By SamKate",
+                      tileSubTitle: "By teacher",
                       tileRating: 4.6,
                     ),
                   ],
