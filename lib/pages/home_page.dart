@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
 
           // List View
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.52,
+            height: MediaQuery.of(context).size.height * 0.54,
             child: ListView(
               children: [
                 // Categories
