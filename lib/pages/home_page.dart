@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(width: 20),
                 OutlinedButton(
-                  onPressed: () => null,
+                  onPressed: () => {},
                   child: const Icon(
                     Icons.qr_code_rounded,
                     color: Colors.black,

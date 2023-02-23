@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:quizz_me/pages/favorites_page.dart';
 import 'package:quizz_me/pages/home_page.dart';
 import 'package:quizz_me/pages/profile_page.dart';
@@ -29,9 +28,9 @@ class Pages extends StatefulWidget {
 class _PagesState extends State<Pages> {
   int selectedIndex = 1;
   final List<Widget> pages = [
-    const ProfilePage(),
-    const HomePage(),
     const FavoritesPage(),
+    const HomePage(),
+    const ProfilePage(),
   ];
 
   @override
