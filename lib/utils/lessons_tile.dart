@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quizz_me/constants/favorites.dart';
 
-class LessonTile extends StatelessWidget {
+class LessonTile extends StatefulWidget {
   final String imagePath;
   final String tileTitle;
   final String tileSubTitle;
@@ -15,6 +16,22 @@ class LessonTile extends StatelessWidget {
   });
 
   @override
+  State<LessonTile> createState() => _LessonTileState();
+}
+
+class _LessonTileState extends State<LessonTile> {
+  bool isPressed = false;
+  void addFavoriteTile() {
+    if (favoriteLessonTile.contains(widget)) {
+      favoriteLessonTile.remove(widget);
+    } else {
+      favoriteLessonTile.add(widget);
+    }
+
+    setState(() => favoriteLessonTile);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -24,7 +41,7 @@ class LessonTile extends StatelessWidget {
           SizedBox(
             height: 100,
             // width: 30,
-            child: Image.asset(imagePath),
+            child: Image.asset(widget.imagePath),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,14 +56,32 @@ class LessonTile extends StatelessWidget {
                   ),
                   const SizedBox(width: 5),
                   Text(
-                    tileRating.toString(),
+                    widget.tileRating.toString(),
+                  ),
+                  const SizedBox(width: 45),
+                  Container(
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        addFavoriteTile();
+                      },
+                      icon: isPressed
+                          ? const Icon(Icons.bookmark_rounded, size: 20)
+                          : const Icon(Icons.bookmark_outline_rounded,
+                              size: 20),
+                    ),
                   ),
                 ],
               ),
 
               // Title
               Text(
-                tileTitle,
+                widget.tileTitle,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -54,7 +89,7 @@ class LessonTile extends StatelessWidget {
 
               // Sub Title
               Text(
-                tileSubTitle,
+                widget.tileSubTitle,
                 style: const TextStyle(
                   color: Colors.grey,
                 ),

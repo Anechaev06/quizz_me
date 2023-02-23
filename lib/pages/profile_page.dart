@@ -38,7 +38,7 @@ class ProfilePage extends StatelessWidget {
                       height: 35,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey,
+                        color: primaryColor,
                       ),
                       child: IconButton(
                         onPressed: () {},
@@ -86,7 +86,7 @@ class ProfilePage extends StatelessWidget {
                 onPress: () {},
               ),
               ProfileMenuWidget(
-                title: "Theme",
+                title: "Themes",
                 icon: LineIcons.palette,
                 onPress: () {},
               ),
