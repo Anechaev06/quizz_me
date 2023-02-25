@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FavoriteProvider extends ChangeNotifier {
-  List<Widget> _tiles = [];
+  final List<Widget> _tiles = [];
   List<Widget> get tiles => _tiles;
 
   void toggleFavorite(Widget tile) {

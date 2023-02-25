@@ -9,7 +9,7 @@ class TextFormFieldTheme {
     floatingLabelStyle: const TextStyle(color: Colors.black),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(100),
-      borderSide: BorderSide(width: 2, color: Colors.black),
+      borderSide: const BorderSide(width: 2, color: Colors.black),
     ),
   );
 

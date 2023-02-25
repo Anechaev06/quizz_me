@@ -11,10 +11,13 @@ class FavoritesPage extends StatelessWidget {
     final provider = Provider.of<FavoriteProvider>(context);
     final tiles = provider.tiles;
     return SafeArea(
-      child: ListView(
-        children: [
-          for (var tile in tiles) tile,
-        ],
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.85,
+        child: ListView(
+          children: [
+            for (var tile in tiles) tile,
+          ],
+        ),
       ),
     );
   }
