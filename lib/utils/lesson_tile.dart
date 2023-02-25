@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quizz_me/constants/favorites.dart';
+import 'package:provider/provider.dart';
+import '../providers/favorite_provider.dart';
 
-class LessonTile extends StatefulWidget {
+class LessonTile extends StatelessWidget {
   final String imagePath;
   final String tileTitle;
   final String tileSubTitle;
@@ -16,23 +17,8 @@ class LessonTile extends StatefulWidget {
   });
 
   @override
-  State<LessonTile> createState() => _LessonTileState();
-}
-
-class _LessonTileState extends State<LessonTile> {
-  bool isPressed = false;
-  void addFavoriteTile() {
-    if (favoriteLessonTile.contains(widget)) {
-      favoriteLessonTile.remove(widget);
-    } else {
-      favoriteLessonTile.add(widget);
-    }
-
-    setState(() => favoriteLessonTile);
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<FavoriteProvider>(context);
     return Container(
       padding: const EdgeInsets.all(20),
       child: Row(
@@ -41,7 +27,7 @@ class _LessonTileState extends State<LessonTile> {
           SizedBox(
             height: 100,
             // width: 30,
-            child: Image.asset(widget.imagePath),
+            child: Image.asset(imagePath),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +42,7 @@ class _LessonTileState extends State<LessonTile> {
                   ),
                   const SizedBox(width: 5),
                   Text(
-                    widget.tileRating.toString(),
+                    tileRating.toString(),
                   ),
                   const SizedBox(width: 45),
                   Container(
@@ -67,13 +53,16 @@ class _LessonTileState extends State<LessonTile> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: IconButton(
-                      onPressed: () {
-                        addFavoriteTile();
-                      },
-                      icon: isPressed
-                          ? const Icon(Icons.bookmark_rounded, size: 20)
-                          : const Icon(Icons.bookmark_outline_rounded,
-                              size: 20),
+                      onPressed: () => provider.toggleFavorite(this),
+                      icon: provider.isExist(this)
+                          ? const Icon(
+                              Icons.bookmark_rounded,
+                              size: 20,
+                            )
+                          : const Icon(
+                              Icons.bookmark_outline_rounded,
+                              size: 20,
+                            ),
                     ),
                   ),
                 ],
@@ -81,7 +70,7 @@ class _LessonTileState extends State<LessonTile> {
 
               // Title
               Text(
-                widget.tileTitle,
+                tileTitle,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -89,7 +78,7 @@ class _LessonTileState extends State<LessonTile> {
 
               // Sub Title
               Text(
-                widget.tileSubTitle,
+                tileSubTitle,
                 style: const TextStyle(
                   color: Colors.grey,
                 ),

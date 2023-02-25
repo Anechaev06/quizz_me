@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:anim_search_bar/anim_search_bar.dart';
-import 'package:quizz_me/utils/lessons_tile.dart';
+import 'package:quizz_me/utils/lesson_tile.dart';
 import 'package:quizz_me/utils/subject_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
-    TextEditingController textController = TextEditingController();
+    final textController = TextEditingController();
     final controller = PageController();
 
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Title
+          // Q.Me icon
           SizedBox(
             width: double.infinity,
             height: 70,
@@ -44,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                 AnimSearchBar(
                   width: 250,
                   textController: textController,
-                  onSuffixTap: () => setState(() => textController.clear()),
+                  onSuffixTap: () {},
                   onSubmitted: ((p0) => null),
                 ),
                 const SizedBox(width: 20),
@@ -61,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
           const SizedBox(height: 20),
 
-          // List View
+          // List View of Categories and Popular Lessons
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.6,
             child: ListView(
@@ -78,9 +73,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 10),
-
                 // Subjects
                 SizedBox(
                   height: 125,
@@ -133,7 +126,6 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-
                 // Page Indicator
                 Center(
                   child: SmoothPageIndicator(
@@ -157,7 +149,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-
                 Column(
                   children: const [
                     LessonTile(
@@ -189,8 +180,6 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-
-          const SizedBox(height: 10),
         ],
       ),
     );

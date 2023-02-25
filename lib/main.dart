@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quizz_me/providers/favorite_provider.dart';
 import 'package:quizz_me/pages/favorites_page.dart';
 import 'package:quizz_me/pages/home_page.dart';
 import 'package:quizz_me/pages/profile_page.dart';
@@ -18,14 +20,26 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Pages extends StatefulWidget {
+class Pages extends StatelessWidget {
   const Pages({super.key});
 
   @override
-  State<Pages> createState() => _PagesState();
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => FavoriteProvider(),
+      child: const GnavBar(),
+    );
+  }
 }
 
-class _PagesState extends State<Pages> {
+class GnavBar extends StatefulWidget {
+  const GnavBar({super.key});
+
+  @override
+  State<GnavBar> createState() => _GnavBarState();
+}
+
+class _GnavBarState extends State<GnavBar> {
   int selectedIndex = 1;
   final List<Widget> pages = [
     const FavoritesPage(),
