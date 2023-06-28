@@ -5,7 +5,7 @@ const String profile = "Profile";
 const String editProfile = "Edit Profile";
 const String logoutDialogHeading = "Logout";
 const String profileHeading = "Vlad Nechaev";
-const String profileSubHeading = "nechaevvlad06@mail.ru";
+const String profileSubHeading = "test@mail.ru";
 // --Menu
 const String menu1 = "Setting";
 const String menu2 = "Billing Details";

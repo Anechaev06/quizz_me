@@ -80,10 +80,10 @@ class HomePage extends StatelessWidget {
                   child: PageView(
                     scrollDirection: Axis.horizontal,
                     controller: controller,
-                    children: [
+                    children: const [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        children: [
                           SubjectButton(
                             imagePath: "assets/subjects/math.png",
                             subjectName: "Math",
@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        children: [
                           SubjectButton(
                             imagePath: "assets/subjects/art.png",
                             subjectName: "Art",
@@ -149,8 +149,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column(
-                  children: const [
+                const Column(
+                  children: [
                     LessonTile(
                       imagePath: "assets/icons/algebra.png",
                       tileTitle: "Algebra Basics",

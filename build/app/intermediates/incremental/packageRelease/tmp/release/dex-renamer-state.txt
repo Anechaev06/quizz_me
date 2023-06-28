@@ -1,4 +1,0 @@
-#Sat Feb 25 20:21:01 MSK 2023
-base.0=C\:\\Users\\necha\\Desktop\\Flutter\\apps\\quizz_me\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
