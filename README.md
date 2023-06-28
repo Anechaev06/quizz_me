@@ -1,13 +1,14 @@
 **Study and Quiz App**
 
-![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 55](https://github.com/Anechaev06/quizz_me/assets/57583912/41c2dfec-c842-4033-ad31-e8a19141ce42)
-![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 31](https://github.com/Anechaev06/quizz_me/assets/57583912/8a862c53-f750-418b-aed7-4f0a29b04687)
-![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 59](https://github.com/Anechaev06/quizz_me/assets/57583912/6ebc1dcd-3699-4c36-bd9d-3cc5654c10c7)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 55](https://github.com/Anechaev06/quizz_me/assets/57583912/975c4927-a209-43e3-abb2-2a5f3abbcec6)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 31](https://github.com/Anechaev06/quizz_me/assets/57583912/26949350-25dc-4a1f-80eb-0a7e7084df59)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 59](https://github.com/Anechaev06/quizz_me/assets/57583912/b9087f04-7cb4-49fb-873f-29d3ba45c482)
 
 
 This is a study and quiz app built with Flutter, a popular cross-platform framework for mobile app development. This app aims to provide a seamless learning experience and engage users in interactive quizzes.
 
-Features
+**Features**
+
 Study Material: The app allows users to access a variety of study materials such as notes, documents, and videos. These resources are organized into different categories or subjects to make navigation easier.
 
 Quiz Mode: Users can participate in interactive quizzes to test their knowledge. The app offers different types of quizzes, including multiple choice, true/false, and fill in the blanks. Each quiz may have a time limit and a set of questions.
