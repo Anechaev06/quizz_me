@@ -21,10 +21,9 @@ Quizz.me is a study and quiz app built with Flutter, a popular cross-platform fr
 - **User Profiles:** The app allows users to create personalized profiles where they can manage their preferences, view their achievements, and track their overall progress.
 
 ## Screenshots
-
-![Screenshot 1](https://github.com/Anechaev06/quizz_me/assets/57583912/975c4927-a209-43e3-abb2-2a5f3abbcec6)
-![Screenshot 2](https://github.com/Anechaev06/quizz_me/assets/57583912/26949350-25dc-4a1f-80eb-0a7e7084df59)
-![Screenshot 3](https://github.com/Anechaev06/quizz_me/assets/57583912/b9087f04-7cb4-49fb-873f-29d3ba45c482)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 55](https://github.com/Anechaev06/quizz_me/assets/57583912/6dec22b6-23ee-4e09-a16b-46f85b970363)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 31](https://github.com/Anechaev06/quizz_me/assets/57583912/9cd1082a-c15c-4582-9500-0e0df2698c3e)
+![Simulator Screenshot - iPhone 14 Pro - 2023-06-28 at 21 57 59](https://github.com/Anechaev06/quizz_me/assets/57583912/7cb20855-33cd-4f12-8b91-8f606e3e4888)
 
 ## Installation
 
